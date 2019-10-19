@@ -1,0 +1,56 @@
+﻿@model DreamCar.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center" style="font-family:'Abel'">Details</h2>
+<hr />
+<div class="text-center">
+    <img src="@Html.DisplayFor(model => model.ImageUrl)" width="500px" height="345px" />
+</div>
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Engine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Engine)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+
+
+    </dl>
+</div>
+<p class="text-center">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
